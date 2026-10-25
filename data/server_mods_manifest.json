@@ -1,0 +1,1069 @@
+{
+  "app_id": "108600",
+  "mods": {
+    "LightOnBelt": {
+      "mod_id": "LightOnBelt",
+      "workshop_id": "3394588830",
+      "name": "[B42] Simple Flashlight on Belt!",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3394588830\\mods\\Simple Flashlight on Belt\\42"
+    },
+    "FenceSheets": {
+      "mod_id": "FenceSheets",
+      "workshop_id": "3785740658",
+      "name": "Fence Sheets",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3785740658\\mods\\FenceSheets\\42"
+    },
+    "FittedBarricades": {
+      "mod_id": "FittedBarricades",
+      "workshop_id": "3795414660",
+      "name": "Fitted Barricades",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3795414660\\mods\\FittedBarricades\\42"
+    },
+    "NepUniversalSS": {
+      "mod_id": "NepUniversalSS",
+      "workshop_id": "3634876505",
+      "name": "Nepenthe's Universal Simple Silencers",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3634876505\\mods\\UniversalSS\\42"
+    },
+    "SimpleSilencers": {
+      "mod_id": "SimpleSilencers",
+      "workshop_id": "3309896124",
+      "name": "Simple Silencers",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3309896124\\mods\\SimpleSilencers\\42.20"
+    },
+    "RAF": {
+      "mod_id": "RAF",
+      "workshop_id": "3634727573",
+      "name": "RAF - Real Automatic Firerate [B42.13]",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3634727573\\mods\\RAF_Real_Automatic_Firerate\\42.13"
+    },
+    "VFExpansionReduxb42": {
+      "mod_id": "VFExpansionReduxb42",
+      "workshop_id": "3611718925",
+      "name": "Vanilla Firearms Expansion [B42.15]",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3611718925\\mods\\VFE\\42.15"
+    },
+    "VFExpansion3Reduxb42": {
+      "mod_id": "VFExpansion3Reduxb42",
+      "workshop_id": "3611718925",
+      "name": "Vanilla firearms expansion - Post '93 [B42.15]",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3611718925\\mods\\VFEP93\\42.15"
+    },
+    "VFExpansion2Reduxb42": {
+      "mod_id": "VFExpansion2Reduxb42",
+      "workshop_id": "3611718925",
+      "name": "Vanilla firearms expansion - STALKER pack [B42.15]",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3611718925\\mods\\VFES\\42.15"
+    },
+    "USS_VFE_UniversalSilencersPatch": {
+      "mod_id": "USS_VFE_UniversalSilencersPatch",
+      "workshop_id": "3664132041",
+      "name": "USS + VFE Universal Silencers Patch [B42.13.2]",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3664132041\\mods\\USS_VFE_UniversalSilencers_Patch\\42.13"
+    },
+    "VanillaMuzzleflashEnhanced": {
+      "mod_id": "VanillaMuzzleflashEnhanced",
+      "workshop_id": "3389972559",
+      "name": "Vanilla Muzzleflash Enhanced",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3389972559\\mods\\Vanilla Muzzleflash Enhanced\\42"
+    },
+    "BCGTools": {
+      "mod_id": "BCGTools",
+      "workshop_id": "2423906082",
+      "name": "Bushcraft Gear - Tools",
+      "version": "common",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\2423906082\\mods\\BCGTools\\common"
+    },
+    "AviationCore": {
+      "mod_id": "AviationCore",
+      "workshop_id": "3783444342",
+      "name": "Aviation Core",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3783444342\\mods\\AviationCore\\42"
+    },
+    "UH-1BHelicopter": {
+      "mod_id": "UH-1BHelicopter",
+      "workshop_id": "3409723807",
+      "name": "UH-1B Helicopter",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3409723807\\mods\\UH-1BHelicopter\\42.0"
+    },
+    "ImmersiveSnow": {
+      "mod_id": "ImmersiveSnow",
+      "workshop_id": "3810071828",
+      "name": "Immersive Snow",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3810071828\\mods\\ImmersiveSnow\\42"
+    },
+    "ConditionOnDash": {
+      "mod_id": "ConditionOnDash",
+      "workshop_id": "3306168142",
+      "name": "Condition On Dash",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3306168142\\mods\\ConditionOnDash\\42"
+    },
+    "MultipleGeneratorsB42": {
+      "mod_id": "MultipleGeneratorsB42",
+      "workshop_id": "3695167770",
+      "name": "MultipleGeneratorsB42",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3695167770\\mods\\MultipleGeneratorsB42\\42"
+    },
+    "BetterGeneratorInfo": {
+      "mod_id": "BetterGeneratorInfo",
+      "workshop_id": "3576056135",
+      "name": "Better Generator Info",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3576056135\\mods\\Better Generator Info\\42.20"
+    },
+    "buildinggenpowerv2": {
+      "mod_id": "buildinggenpowerv2",
+      "workshop_id": "3597471949",
+      "name": "Generator Powered Buildings",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3597471949\\mods\\GeneratorPlus2\\42.15"
+    },
+    "GenRange": {
+      "mod_id": "GenRange",
+      "workshop_id": "2972289937",
+      "name": "Generator Range",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\2972289937\\mods\\GeneratorRange\\42"
+    },
+    "ReducedWoodWeight25p41": {
+      "mod_id": "ReducedWoodWeight25p41",
+      "workshop_id": "2671262103",
+      "name": "25% Wood Weight",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\2671262103\\mods\\ReducedWoodWeight25p41\\42"
+    },
+    "Erikas_Tiles": {
+      "mod_id": "Erikas_Tiles",
+      "workshop_id": "3346506593",
+      "name": "Erika's Tiles",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3346506593\\mods\\Erikas Tiles\\42"
+    },
+    "Erikas_Furniture_Store": {
+      "mod_id": "Erikas_Furniture_Store",
+      "workshop_id": "3363546437",
+      "name": "Erika's Furniture Store",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3363546437\\mods\\Erikas_Furniture_Store\\42"
+    },
+    "StowInHands": {
+      "mod_id": "StowInHands",
+      "workshop_id": "3786918614",
+      "name": "Hands",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3786918614\\mods\\StowInHands\\42"
+    },
+    "Explosives": {
+      "mod_id": "Explosives",
+      "workshop_id": "3745718141",
+      "name": "US Military Grenades [B42]",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3745718141\\mods\\Explosives\\42"
+    },
+    "Ladders42204": {
+      "mod_id": "Ladders42204",
+      "workshop_id": "3629835761",
+      "name": "Ladders?! B42.20.4 [USE FOR NEW SAVES]",
+      "version": "common",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3629835761\\mods\\Ladders\\common"
+    },
+    "1VCESTANDARD": {
+      "mod_id": "1VCESTANDARD",
+      "workshop_id": "3421271152",
+      "name": "Vanilla Clothing Expansion [B42]",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3421271152\\mods\\Vanilla Clothing Expansion\\42.19"
+    },
+    "BadlandsGreenhouse": {
+      "mod_id": "BadlandsGreenhouse",
+      "workshop_id": "3807333290",
+      "name": "BADLANDS Greenhouse",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3807333290\\mods\\BadlandsGreenhouse\\42"
+    },
+    "PIP": {
+      "mod_id": "PIP",
+      "workshop_id": "3739173520",
+      "name": "Plysken Irrigation Pipes",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3739173520\\mods\\Plysken Irrigation Pipes\\42.1"
+    },
+    "AttachmentsUI": {
+      "mod_id": "AttachmentsUI",
+      "workshop_id": "3816324722",
+      "name": "Attachments UI",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3816324722\\mods\\AttachmentsUI\\42"
+    },
+    "PertsPartyTiles": {
+      "mod_id": "PertsPartyTiles",
+      "workshop_id": "2837923608",
+      "name": "Perts Party Tiles",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\2837923608\\mods\\Perts Party Tiles\\42"
+    },
+    "UnofficialMappersCommunityTilePack": {
+      "mod_id": "UnofficialMappersCommunityTilePack",
+      "workshop_id": "3628736763",
+      "name": "CommunityTilePack",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3628736763\\mods\\CommunityTilePack\\42"
+    },
+    "WMTBoat": {
+      "mod_id": "WMTBoat",
+      "workshop_id": "3673222028",
+      "name": "WestpointMilitaryTugBoat",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3673222028\\mods\\WestPoint-Military-TugBoat\\42.0"
+    },
+    "LongTermPreservationExtended": {
+      "mod_id": "LongTermPreservationExtended",
+      "workshop_id": "3597673472",
+      "name": "Long Term Preservation Extended",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3597673472\\mods\\LongTermPreservationExtended\\42.20"
+    },
+    "Gunsmith1993": {
+      "mod_id": "Gunsmith1993",
+      "workshop_id": "3813655486",
+      "name": "Gunsmith: The 1993 Arsenal",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3813655486\\mods\\Gunsmith1993\\42"
+    },
+    "CraftEnginePartsCheap": {
+      "mod_id": "CraftEnginePartsCheap",
+      "workshop_id": "2744114761",
+      "name": "Craft Engine Parts (cheap)",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\2744114761\\mods\\Craft Engine Parts (cheap)\\42"
+    },
+    "BadlandsPower": {
+      "mod_id": "BadlandsPower",
+      "workshop_id": "3804093735",
+      "name": "Badlands Power",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3804093735\\mods\\BadlandsPower\\42"
+    },
+    "FixedLightOnBeltAF": {
+      "mod_id": "FixedLightOnBeltAF",
+      "workshop_id": "3625933422",
+      "name": "[B42] Simple Flashlight on Belt! (Angled Flashlight fix)",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3625933422\\mods\\Fixed Simple Flashlight on Belt\\42"
+    },
+    "PAR": {
+      "mod_id": "PAR",
+      "workshop_id": "3749848348",
+      "name": "Plysken Attachments Reborn",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3749848348\\mods\\Plysken Attachments Reborn\\42.1"
+    },
+    "CerberusPack": {
+      "mod_id": "CerberusPack",
+      "workshop_id": "3470478700",
+      "name": "Cerberus Pack",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3470478700\\mods\\Cerberus Pack\\42.15"
+    },
+    "KATTAJ1_ClothesCore": {
+      "mod_id": "KATTAJ1_ClothesCore",
+      "workshop_id": "3470422050",
+      "name": "KATTAJ1 Clothes Core",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3470422050\\mods\\KATTAJ1 Clothes Core\\42.15"
+    },
+    "50%metalweight": {
+      "mod_id": "50%metalweight",
+      "workshop_id": "2829657632",
+      "name": "50% metal weight",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\2829657632\\mods\\metalweight\\42"
+    },
+    "HardwoodsTurnoutGear": {
+      "mod_id": "HardwoodsTurnoutGear",
+      "workshop_id": "3671351750",
+      "name": "Hardwoods Heavy-Duty Turnout Gear",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3671351750\\mods\\Hardwoods Turnout Gear\\42"
+    },
+    "KI5trailers": {
+      "mod_id": "KI5trailers",
+      "workshop_id": "3330403100",
+      "name": "Trailers!",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3330403100\\mods\\KI5trailers\\42.13"
+    },
+    "damnlib": {
+      "mod_id": "damnlib",
+      "workshop_id": "3171167894",
+      "name": "that DAMN Library",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3171167894\\mods\\damnlib\\42.20"
+    },
+    "AliceGear": {
+      "mod_id": "AliceGear",
+      "workshop_id": "3610005735",
+      "name": "ALICE Gear",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3610005735\\mods\\AliceMod\\42.15"
+    },
+    "SmarterStorage": {
+      "mod_id": "SmarterStorage",
+      "workshop_id": "3290232938",
+      "name": "Smarter Storage",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3290232938\\mods\\SmarterStorage\\42"
+    },
+    "NicksInventorySelectionFix": {
+      "mod_id": "NicksInventorySelectionFix",
+      "workshop_id": "3782920935",
+      "name": "Nick's Inventory Selection Fix",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3782920935\\mods\\NicksInventorySelectionFix\\42"
+    },
+    "GydeTraitMags": {
+      "mod_id": "GydeTraitMags",
+      "workshop_id": "3342191739",
+      "name": "Gyde's Trait Magazines",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3342191739\\mods\\GydeTraitMagazines\\42.20.1"
+    },
+    "ProximityInventory": {
+      "mod_id": "ProximityInventory",
+      "workshop_id": "2847184718",
+      "name": "Proximity Inventory B42",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\2847184718\\mods\\ProximityInventory\\42"
+    },
+    "CyesPushDoors": {
+      "mod_id": "CyesPushDoors",
+      "workshop_id": "3780683663",
+      "name": "Cye's Push Doors!",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3780683663\\mods\\CyesPushDoors\\42"
+    },
+    "UsefulBarrelsMP": {
+      "mod_id": "UsefulBarrelsMP",
+      "workshop_id": "3436537035",
+      "name": "Useful Barrels",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3436537035\\mods\\UsefulBarrelsMP\\42"
+    },
+    "ArcadiaRefillablePropaneTanks_B42": {
+      "mod_id": "ArcadiaRefillablePropaneTanks_B42",
+      "workshop_id": "3786849936",
+      "name": "Refillable Propane Tanks [B42.20+] - 1.9.6",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3786849936\\mods\\ArcadiaRefillablePropaneTanks_B42\\42"
+    },
+    "containertagsb42": {
+      "mod_id": "containertagsb42",
+      "workshop_id": "3670220111",
+      "name": "Container Tags [B42]",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3670220111\\mods\\containertags\\42"
+    },
+    "ItemMergeUltimate": {
+      "mod_id": "ItemMergeUltimate",
+      "workshop_id": "3790662607",
+      "name": "Item Merge Ultimate",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3790662607\\mods\\ItemMergeUltimate\\42"
+    },
+    "TanksHavePropane42": {
+      "mod_id": "TanksHavePropane42",
+      "workshop_id": "3676347667",
+      "name": "Tanks Have Propane (B42)",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3676347667\\mods\\TanksHavePropane\\42"
+    },
+    "traitsAsSkills": {
+      "mod_id": "traitsAsSkills",
+      "workshop_id": "3784847437",
+      "name": "Traits As Skills",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3784847437\\mods\\traitsAsSkills\\42.0"
+    },
+    "SurvivorBriefing": {
+      "mod_id": "SurvivorBriefing",
+      "workshop_id": "3808944882",
+      "name": "Survivor Briefing",
+      "version": "common",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3808944882\\mods\\SurvivorBriefing\\common"
+    },
+    "MRT_MultipleGenerators": {
+      "mod_id": "MRT_MultipleGenerators",
+      "workshop_id": "3765006871",
+      "name": "MRT.NoisyNeighbors: Multiple Generators",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3765006871\\mods\\MRT_MultipleGenerators\\42"
+    },
+    "RCMilitaryTentsMod": {
+      "mod_id": "RCMilitaryTentsMod",
+      "workshop_id": "3718884098",
+      "name": "[B42] Military Tents",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3718884098\\mods\\MilitaryTents\\42"
+    },
+    "BritasArmorPackB42": {
+      "mod_id": "BritasArmorPackB42",
+      "workshop_id": "3782587904",
+      "name": "[B42] Brita's Armor Pack - Build 42 Port",
+      "version": "common",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3782587904\\mods\\BritasArmorPackB42\\common"
+    },
+    "LitePackBackpackB42": {
+      "mod_id": "LitePackBackpackB42",
+      "workshop_id": "3782129003",
+      "name": "Lite Pack Backpack [B42.20.2]",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3782129003\\mods\\LitePackBackpackB42\\42"
+    },
+    "ZombieHunterBackpackB42": {
+      "mod_id": "ZombieHunterBackpackB42",
+      "workshop_id": "3781842421",
+      "name": "Zombie Hunter Backpack [B42.20.2]",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3781842421\\mods\\ZombieHunterBackpackB42\\42"
+    },
+    "[J&G] T.H.O.R.N. Uniform!": {
+      "mod_id": "[J&G] T.H.O.R.N. Uniform!",
+      "workshop_id": "3781267190",
+      "name": "[J&G] T.H.O.R.N. Uniform!",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3781267190\\mods\\[J&G] T.H.O.R.N. Uniform\\42.20"
+    },
+    "LynxPack": {
+      "mod_id": "LynxPack",
+      "workshop_id": "3470485566",
+      "name": "Lynx Pack",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3470485566\\mods\\Lynx Pack\\42.15"
+    },
+    "AlicesDuffelBagTweak": {
+      "mod_id": "AlicesDuffelBagTweak",
+      "workshop_id": "2959854619",
+      "name": "Alice's DuffelBag Tweak",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\2959854619\\mods\\AlicesDuffelBagTweak\\42"
+    },
+    "[J&G] Umbrella Corp Uniform": {
+      "mod_id": "[J&G] Umbrella Corp Uniform",
+      "workshop_id": "3675741487",
+      "name": "[J&G] Umbrella Corp Uniform [B42/41]",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3675741487\\mods\\[J&G] Umbrella Corp Uniform\\42.20"
+    },
+    "H_E_C_U": {
+      "mod_id": "H_E_C_U",
+      "workshop_id": "3452711271",
+      "name": "H.E.C.U.",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3452711271\\mods\\H.E.C.U\\42.13"
+    },
+    "WasteConversion": {
+      "mod_id": "WasteConversion",
+      "workshop_id": "3470205514",
+      "name": "[B42]Recycling of waste",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3470205514\\mods\\Recycling of waste\\42"
+    },
+    "KeepPerkLevel": {
+      "mod_id": "KeepPerkLevel",
+      "workshop_id": "3314107094",
+      "name": "Keep Perk Level",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3314107094\\mods\\KeepPerkLevel\\42.0"
+    },
+    "PivotMod": {
+      "mod_id": "PivotMod",
+      "workshop_id": "2946812728",
+      "name": "PivotMod",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\2946812728\\mods\\PivotMod\\42"
+    },
+    "RUNE-EXP": {
+      "mod_id": "RUNE-EXP",
+      "workshop_id": "3391145494",
+      "name": "RuneExp",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3391145494\\mods\\RuneExp\\42"
+    },
+    "InstantReload": {
+      "mod_id": "InstantReload",
+      "workshop_id": "3779832179",
+      "name": "Instant Reload (IR)",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3779832179\\mods\\InstantReload\\42"
+    },
+    "TchernoLib": {
+      "mod_id": "TchernoLib",
+      "workshop_id": "3389605231",
+      "name": "TchernoLib",
+      "version": "common",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3389605231\\mods\\TchernoLib\\common"
+    },
+    "ShowAttackDistanceB42": {
+      "mod_id": "ShowAttackDistanceB42",
+      "workshop_id": "3456502801",
+      "name": "Show Attack Distance",
+      "version": "common",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3456502801\\mods\\ShowAttackDistance\\common"
+    },
+    "BobrMinigun": {
+      "mod_id": "BobrMinigun",
+      "workshop_id": "3781692448",
+      "name": "XM-556 Hurricane",
+      "version": "common",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3781692448\\mods\\XM556Minigun\\common"
+    },
+    "JestersGunPack": {
+      "mod_id": "JestersGunPack",
+      "workshop_id": "3775744177",
+      "name": "[B42] Jester's Gun Pack",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3775744177\\mods\\Gunpack\\42"
+    },
+    "RamshackleRecipes": {
+      "mod_id": "RamshackleRecipes",
+      "workshop_id": "3355210994",
+      "name": "Ramshackle Recipes",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3355210994\\mods\\RamshackleRecipes\\42.0"
+    },
+    "ITDN": {
+      "mod_id": "ITDN",
+      "workshop_id": "3355210994",
+      "name": "Ignore this, does nothing",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3355210994\\mods\\RamshackleRecipes-Metalworking\\42.0"
+    },
+    "FH": {
+      "mod_id": "FH",
+      "workshop_id": "2447729538",
+      "name": "Fluffy Hair",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\2447729538\\mods\\FluffyHair\\42"
+    },
+    "UndeadSuvivor": {
+      "mod_id": "UndeadSuvivor",
+      "workshop_id": "2713921292",
+      "name": "UndeadSurvivor",
+      "version": "common",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\2713921292\\mods\\UndeadSurvivor\\common"
+    },
+    "RET_LethalStealth": {
+      "mod_id": "RET_LethalStealth",
+      "workshop_id": "3531611692",
+      "name": "Lethal Stealth",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3531611692\\mods\\LethalStealth\\42"
+    },
+    "ImprovisedSilencers": {
+      "mod_id": "ImprovisedSilencers",
+      "workshop_id": "3779164273",
+      "name": "Improvised Silencers (Build 42.20 Compatibility)",
+      "version": "common",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3779164273\\mods\\Improvised Silencers\\common"
+    },
+    "BB_ExtraGunSlot": {
+      "mod_id": "BB_ExtraGunSlot",
+      "workshop_id": "3120702374",
+      "name": "Extra Gun Slot",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3120702374\\mods\\ExtraGunSlot\\42.0"
+    },
+    "SCP_Foundation_Pack": {
+      "mod_id": "SCP_Foundation_Pack",
+      "workshop_id": "3580511016",
+      "name": "SCP Foundation Pack",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3580511016\\mods\\SCP Pack\\42"
+    },
+    "hf_point_blank": {
+      "mod_id": "hf_point_blank",
+      "workshop_id": "2990322197",
+      "name": "Point Blank [b41+]",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\2990322197\\mods\\HF_PointBlankMod\\42"
+    },
+    "HardwoodsPolicePack": {
+      "mod_id": "HardwoodsPolicePack",
+      "workshop_id": "3687353319",
+      "name": "Hardwoods' Police Pack",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3687353319\\mods\\Hardwood's Police Pack\\42"
+    },
+    "U.S. M998 Humvee by Papa_Chad": {
+      "mod_id": "U.S. M998 Humvee by Papa_Chad",
+      "workshop_id": "3554424111",
+      "name": "U.S. M998 Humvee by Papa_Chad",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3554424111\\mods\\U.S. M998 Humvee by Papa_Chad\\42.13"
+    },
+    "alicesWeaponSling": {
+      "mod_id": "alicesWeaponSling",
+      "workshop_id": "3775549570",
+      "name": "Alice's Weapon Sling",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3775549570\\mods\\alicesWeaponSling\\42"
+    },
+    "alicesWeaponSlingRadialMenu": {
+      "mod_id": "alicesWeaponSlingRadialMenu",
+      "workshop_id": "3775549570",
+      "name": "Alice's Weapon Sling - Radial Menu [ADDON]",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3775549570\\mods\\alicesWeaponSlingRadialMenu\\42"
+    },
+    "Swatpack_by_Slobodskoy": {
+      "mod_id": "Swatpack_by_Slobodskoy",
+      "workshop_id": "3774820554",
+      "name": "Swatpack",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3774820554\\mods\\Swatpack\\42"
+    },
+    "R.U. BTR-80 by Papa_Chad": {
+      "mod_id": "R.U. BTR-80 by Papa_Chad",
+      "workshop_id": "3661387277",
+      "name": "R.U. BTR-80 by Papa_Chad",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3661387277\\mods\\R.U. BTR-80 by Papa_Chad\\42.13"
+    },
+    "U.S. M4A1 Sherman by Papa_Chad": {
+      "mod_id": "U.S. M4A1 Sherman by Papa_Chad",
+      "workshop_id": "3783055980",
+      "name": "U.S. M4A1 Sherman by Papa_Chad",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3783055980\\mods\\U.S. M4A1 Sherman by Papa_Chad\\42.20"
+    },
+    "U.S. M4A1 Sherman Drive and Shoot by Papa_Chad": {
+      "mod_id": "U.S. M4A1 Sherman Drive and Shoot by Papa_Chad",
+      "workshop_id": "3783055980",
+      "name": "U.S. M4A1 Sherman Drive and Shoot by Papa_Chad",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3783055980\\mods\\U.S. M4A1 Sherman Drive and Shoot by Papa_Chad\\42.20"
+    },
+    "Fallout Hummer by Papa_Chad": {
+      "mod_id": "Fallout Hummer by Papa_Chad",
+      "workshop_id": "3658100636",
+      "name": "Fallout Hummer by Papa_Chad",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3658100636\\mods\\Fallout Hummer by Papa_Chad\\42.13"
+    },
+    "U.S. M60A3 by Papa_Chad": {
+      "mod_id": "U.S. M60A3 by Papa_Chad",
+      "workshop_id": "3739363702",
+      "name": "U.S. M60A3 by Papa_Chad",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3739363702\\mods\\U.S. M60A3 by Papa_Chad\\42.18"
+    },
+    "U.S. M60A3 Drive and Shoot by Papa_Chad": {
+      "mod_id": "U.S. M60A3 Drive and Shoot by Papa_Chad",
+      "workshop_id": "3739363702",
+      "name": "U.S. M60A3 Drive and Shoot by Papa_Chad",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3739363702\\mods\\U.S. M60A3 Drive and Shoot by Papa_Chad\\42.18"
+    },
+    "U.S.M113_APC_by_Papa_Chad": {
+      "mod_id": "U.S.M113_APC_by_Papa_Chad",
+      "workshop_id": "2705655822",
+      "name": "U.S. M113 APC by Papa_Chad",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\2705655822\\mods\\U.S. M113 APC by Papa_Chad\\42.13"
+    },
+    "U.S. M163 VADS by Papa_Chad by Papa_Chad": {
+      "mod_id": "U.S. M163 VADS by Papa_Chad by Papa_Chad",
+      "workshop_id": "3598575779",
+      "name": "U.S. M163 VADS by Papa_Chad",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3598575779\\mods\\U.S. M163 VADS by Papa_Chad\\42.13"
+    },
+    "AMGeneralTankerFunctionality": {
+      "mod_id": "AMGeneralTankerFunctionality",
+      "workshop_id": "3790021065",
+      "name": "AM General Tanker Functionality",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3790021065\\mods\\AMGeneralTankerFunctionality\\42.20"
+    },
+    "78amgeneralM35A2": {
+      "mod_id": "78amgeneralM35A2",
+      "workshop_id": "2799152995",
+      "name": "'78 AM General M35 Series Trucks",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\2799152995\\mods\\78amgeneralM35A2\\42.13"
+    },
+    "78amgeneralM49A2C": {
+      "mod_id": "78amgeneralM49A2C",
+      "workshop_id": "2799152995",
+      "name": "'78 AM General M49A2C",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\2799152995\\mods\\78amgeneralM49A2C\\42.0"
+    },
+    "78amgeneralM50A3": {
+      "mod_id": "78amgeneralM50A3",
+      "workshop_id": "2799152995",
+      "name": "'78 AM General M50A3 Water Tanker",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\2799152995\\mods\\78amgeneralM50A3\\42.0"
+    },
+    "82oshkoshM911": {
+      "mod_id": "82oshkoshM911",
+      "workshop_id": "2618213077",
+      "name": "'82 Oshkosh M911",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\2618213077\\mods\\82oshkoshM911\\42.20"
+    },
+    "TaillightsAndStoplights": {
+      "mod_id": "TaillightsAndStoplights",
+      "workshop_id": "3687394815",
+      "name": "Taillights and stoplights",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3687394815\\mods\\Taillights and Stoplights\\42"
+    },
+    "62daimlerFerret": {
+      "mod_id": "62daimlerFerret",
+      "workshop_id": "3787530735",
+      "name": "'62 Daimler Ferret",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3787530735\\mods\\62daimlerFerret\\42.17"
+    },
+    "67commando": {
+      "mod_id": "67commando",
+      "workshop_id": "2478247379",
+      "name": "'67 M706 Cadillac Gage Commando V100",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\2478247379\\mods\\67commando\\42.20"
+    },
+    "67CommandoMobileFortressB42": {
+      "mod_id": "67CommandoMobileFortressB42",
+      "workshop_id": "3790532958",
+      "name": "[B42] 67 Commando & Special Vehicle Fortresses",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3790532958\\mods\\[B42] 67 Commando & Special Vehicle Fortresses\\42"
+    },
+    "PROJECTRVInterior42": {
+      "mod_id": "PROJECTRVInterior42",
+      "workshop_id": "3543229299",
+      "name": "[B42]PROJECT RV Interior",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3543229299\\mods\\modPROJECTRVInterior\\42"
+    },
+    "KI5Camo": {
+      "mod_id": "KI5Camo",
+      "workshop_id": "3309256818",
+      "name": "KI5 Consistent Camos",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3309256818\\mods\\KI5Camos\\42.13"
+    },
+    "PapaChadCamo": {
+      "mod_id": "PapaChadCamo",
+      "workshop_id": "3309256818",
+      "name": "Papa Chad Consistent Camos",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3309256818\\mods\\PapaChadCamos\\42.13"
+    },
+    "cobbM540": {
+      "mod_id": "cobbM540",
+      "workshop_id": "3722240318",
+      "name": "Cobb Motor Company M540",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3722240318\\mods\\cobbM540\\42.13"
+    },
+    "AutomaticRefuelingB42": {
+      "mod_id": "AutomaticRefuelingB42",
+      "workshop_id": "3632134603",
+      "name": "Automatic Refueling",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3632134603\\mods\\AutomaticRefuelingB42\\42.16"
+    },
+    "SuperBulldozer": {
+      "mod_id": "SuperBulldozer",
+      "workshop_id": "3404791450",
+      "name": "SuperBulldozer",
+      "version": "common",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3404791450\\mods\\Super Bulldozer\\common"
+    },
+    "lockMartM577": {
+      "mod_id": "lockMartM577",
+      "workshop_id": "3652371248",
+      "name": "Lock-Mart Industries M577",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3652371248\\mods\\lockMartM577\\42.13"
+    },
+    "RVmilitaryaddon": {
+      "mod_id": "RVmilitaryaddon",
+      "workshop_id": "3614959302",
+      "name": "RV Military Addon",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3614959302\\mods\\RV ADDON\\42"
+    },
+    "84gageV300": {
+      "mod_id": "84gageV300",
+      "workshop_id": "3171184800",
+      "name": "'84 Cadillac Gage LAV-300",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3171184800\\mods\\84gageV300\\42.17"
+    },
+    "78amgeneralM35A2extra": {
+      "mod_id": "78amgeneralM35A2extra",
+      "workshop_id": "2799152995",
+      "name": "'78 AM General M35 Series Trucks Extra Textures",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\2799152995\\mods\\78amgeneralM35A2extra\\42.0"
+    },
+    "78amgeneralM62": {
+      "mod_id": "78amgeneralM62",
+      "workshop_id": "2799152995",
+      "name": "'78 AM General M62 Wrecker",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\2799152995\\mods\\78amgeneralM62\\42.0"
+    },
+    "92amgeneralM998": {
+      "mod_id": "92amgeneralM998",
+      "workshop_id": "2642541073",
+      "name": "'92 AM General M998 + M101A3 Trailer",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\2642541073\\mods\\92amgeneralM998\\42.13"
+    },
+    "92amgeneralM998extra": {
+      "mod_id": "92amgeneralM998extra",
+      "workshop_id": "2642541073",
+      "name": "'92 AM General M998 + M101A3 Trailer Extra Textures",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\2642541073\\mods\\92amgeneralM998extra\\42.0"
+    },
+    "RVInteriorExpansionPart2": {
+      "mod_id": "RVInteriorExpansionPart2",
+      "workshop_id": "3622163276",
+      "name": "RV Interior Expansion Part 2",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3622163276\\mods\\rvupdate2\\42"
+    },
+    "RVInteriorExpansion": {
+      "mod_id": "RVInteriorExpansion",
+      "workshop_id": "3618427553",
+      "name": "RV Interior Expansion",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3618427553\\mods\\rvupdate\\42"
+    },
+    "better-auto-mechanics": {
+      "mod_id": "better-auto-mechanics",
+      "workshop_id": "3635856965",
+      "name": "Better Auto Mechanics",
+      "version": "common",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3635856965\\mods\\better-auto-mechanics\\common"
+    },
+    "DynamicVehicleSnow": {
+      "mod_id": "DynamicVehicleSnow",
+      "workshop_id": "3781818628",
+      "name": "Dynamic Vehicle Snow [Dynamic Wheels TEST]",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3781818628\\mods\\DynamicVehicleSnow\\42"
+    },
+    "Trucksmith": {
+      "mod_id": "Trucksmith",
+      "workshop_id": "3812497744",
+      "name": "[RKC]TRUCKSMITH Vehicle",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3812497744\\mods\\Trucksmith\\42"
+    },
+    "HEMTTCRAM": {
+      "mod_id": "HEMTTCRAM",
+      "workshop_id": "3812498829",
+      "name": "[RKC]HEMTT A3 C-RAM",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3812498829\\mods\\HEMTTCRAM\\42"
+    },
+    "LittleBird": {
+      "mod_id": "LittleBird",
+      "workshop_id": "3807588367",
+      "name": "Little Bird",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3807588367\\mods\\LittleBird\\42"
+    },
+    "Chinook": {
+      "mod_id": "Chinook",
+      "workshop_id": "3811987208",
+      "name": "Chinook",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3811987208\\mods\\Chinook\\42"
+    },
+    "RailroaderRV": {
+      "mod_id": "RailroaderRV",
+      "workshop_id": "3815704604",
+      "name": "RailroaderRV",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3815704604\\mods\\RailroaderRV\\42"
+    },
+    "Rick Grimes - King County Sheriff Uniform (TWD)Build 42": {
+      "mod_id": "Rick Grimes - King County Sheriff Uniform (TWD)Build 42",
+      "workshop_id": "3613433733",
+      "name": "Rick Grimes - King County Sheriff Uniform (TWD)Build 42.13+ Updated",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3613433733\\mods\\Rick Grimes - King County Sheriff Uniform (TWD) Build 42\\42"
+    },
+    "UH1": {
+      "mod_id": "UH1",
+      "workshop_id": "3821934230",
+      "name": "UH-1 Huey",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3821934230\\mods\\UH1\\42"
+    },
+    "UH1Viewpoint": {
+      "mod_id": "UH1Viewpoint",
+      "workshop_id": "3821934230",
+      "name": "UH-1 Huey - Viewpoint Support",
+      "version": "42",
+      "synced": true,
+      "local_path": "D:\\SteamLibrary\\steamapps\\workshop\\content\\108600\\3821934230\\mods\\UH1Viewpoint\\42"
+    }
+  }
+}
