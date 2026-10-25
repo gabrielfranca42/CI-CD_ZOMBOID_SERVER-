@@ -12,12 +12,9 @@ class ServerRulesEngine:
 
     # Mods que causam CRASH GARANTIDO no servidor (VERMELHO)
     CRASH_MODS = {
-        "amclub": "Autotsar Motorclub possui esqueletos FBX incompatíveis com a B42 (bad allocation).",
+        "amclub": "Autotsar Motorclub possui esqueletos FBX incompatíveis com a B42 (bad allocation no Jassimp nativo).",
         "autotsartrailers": "Autotsar Trailers incompatível com a física do servidor B42.",
-        "tsarslib": "Tsar's common library legado.",
-        "melos_tiles_for_miles_pack": "Pack de tiles de alta densidade estoura memória de servidor.",
-        "simonMDsTiles": "Pack de tiles pesado incompatível com capacidade do servidor.",
-        "UnofficialMappersCommunityTilePack": "Tilepack com 102 DepthMaps massivos que derrubam o servidor por estouro de alocação."
+        "tsarslib": "Tsar's common library legado da Build 41."
     }
 
     def __init__(self, specs: SystemSpecs):
@@ -26,6 +23,7 @@ class ServerRulesEngine:
     def evaluate(self, server_config: ServerConfig, workshop: Workshop) -> ServerAuditResult:
         active_server_mods = server_config.load_mods()
         configured_ws_items = set(server_config.load_workshop_items())
+        configured_maps = set(server_config.load_maps())
         host_memory_mb = server_config.load_host_memory()
 
         result = ServerAuditResult(
@@ -52,7 +50,7 @@ class ServerRulesEngine:
                 result.errors.append(f"[MOD CRÍTICO REJEITADO NO SERVIDOR] {name} ({bad_id}): {reason}")
                 categorized_ids.add(bad_id)
 
-        # ─── REGRA 2: Conflitos Mutuamente Exclusivos → VERMELHO ───
+        # ─── REGRA 2: Conflitos Mutuamente Exclusivos e Incompatible Tags → VERMELHO ───
         vfe_legacy = [m for m in active_server_mods if m in ["VFExpansion1", "VFExpansion2", "VFExpansion3"]]
         vfe_redux = [m for m in active_server_mods if "VFExpansionRedux" in m or "Reduxb42" in m]
         if vfe_legacy and vfe_redux:
@@ -78,6 +76,17 @@ class ServerRulesEngine:
                     categorized_ids.add(bad_m)
             result.errors.append(f"[CONFLITO NO SERVIDOR] Variantes duplicadas de CraftEngineParts: {cep_variants}.")
 
+        # Check native incompatible tags on server mods
+        for mid in active_server_mods:
+            mod = workshop.get_mod(mid)
+            if mod:
+                for inc in mod.incompatible:
+                    clean_inc = inc.lstrip(r"\/").strip()
+                    if clean_inc in active_set and clean_inc != mid:
+                        result.errors.append(
+                            f"[CONFLITO NO SERVIDOR (incompatible=)] Mod '{mod.name}' ({mid}) declara conflito com '{clean_inc}'."
+                        )
+
         # ─── REGRA 3: Sincronização Workshop IDs → AMARELO ───
         missing_mappings = []
         for mid in active_server_mods:
@@ -94,6 +103,26 @@ class ServerRulesEngine:
                 f"[SINCRONIZAÇÃO WORKSHOP INCOMPLETA NO SERVIDOR]\n"
                 f"   Existem {len(missing_mappings)} mods ativos sem seus IDs da Oficina na linha 'WorkshopItems='!\n"
                 f"   O servidor não conseguirá carregar esses mods e abortará com NormalTermination."
+            )
+
+        # ─── REGRA 3.5: Sincronização de Mapas (Map=) → AMARELO ───
+        missing_maps = []
+        for mid in active_server_mods:
+            mod = workshop.get_mod(mid)
+            if mod and mod.map_folders:
+                for mf in mod.map_folders:
+                    if mf not in configured_maps:
+                        missing_maps.append(f"{mod.name} ({mid}) -> Pasta de Mapa: {mf}")
+                        if mid not in categorized_ids:
+                            result.yellow_mods.append((mid, mod.name, f"🟡 Pasta de mapa '{mf}' ausente na linha Map= do servertest.ini."))
+
+        result.missing_map_mappings = missing_maps
+        if missing_maps:
+            result.warnings.append(
+                f"[SINCRONIZAÇÃO DE MAPAS PENDENTE NO SERVIDOR]\n"
+                f"   Detectadas {len(missing_maps)} pastas de mapa não incluídas na linha 'Map=' do servertest.ini:\n"
+                + "\n".join([f"     * {mm}" for mm in missing_maps])
+                + "\n   Execute a sincronização do servidor para adicioná-las antes de 'Muldraugh, KY'."
             )
 
         # ─── REGRA 4: Compilação e Build de Cada Mod ───
@@ -121,7 +150,7 @@ class ServerRulesEngine:
                 has_critical = any(
                     keyword in err.lower()
                     for err in build_errors
-                    for keyword in ["unexpected symbol", "expected", "syntax error", "eof", "malformed", "module"]
+                    for keyword in ["desbalanceamento", "bytes nulos", "unexpected symbol", "syntax error", "eof", "malformed"]
                 )
 
                 if has_critical:
@@ -140,13 +169,15 @@ class ServerRulesEngine:
             for b_id, b_name, b_errs in result.build_failures:
                 result.errors.append(f"[FALHA DE BUILD/COMPILAÇÃO] {b_name} ({b_id}):\n" + "\n".join([f"     * {e}" for e in b_errs[:3]]))
 
-        # ─── REGRA 5: Teste de Capacidade de Hardware ───
+        # ─── REGRA 5: Teste de Capacidade de Hardware (Headless vs Co-op) ───
         client_mem_gb = 4.0
         server_mem_gb = round(host_memory_mb / 1024, 2)
         windows_gb = 4.5
-        est_depthmaps_gb = round((total_depthmaps * 16) / 1024, 2)
+        client_vram_gb = round(max((total_depthmap_mb * 4.0) / 1024, (total_depthmaps * 6) / 1024), 2)
 
-        total_req_gb = round(client_mem_gb + server_mem_gb + windows_gb + est_depthmaps_gb, 2)
+        # Dedicated headless server only consumes server_mem_gb;
+        # Co-op host playing on same PC consumes client + server + windows + GPU textures
+        total_req_gb = round(client_mem_gb + server_mem_gb + windows_gb + client_vram_gb, 2)
         result.total_required_commit_gb = total_req_gb
 
         if total_req_gb > self.specs.commit_limit_gb:
@@ -154,9 +185,9 @@ class ServerRulesEngine:
             diff = round(total_req_gb - self.specs.commit_limit_gb, 2)
             result.errors.append(
                 f"[TESTE DE HARDWARE DO SERVIDOR REPROVADO - ESTOURO DE MEMÓRIA VIRTUAL]\n"
-                f"   Demanda Estimada (Cliente {client_mem_gb}GB + Servidor {server_mem_gb}GB + Texturas {est_depthmaps_gb}GB + Windows {windows_gb}GB): {total_req_gb} GB\n"
+                f"   Demanda Estimada (Cliente {client_mem_gb}GB + Servidor {server_mem_gb}GB + Texturas VRAM {client_vram_gb}GB + Windows {windows_gb}GB): {total_req_gb} GB\n"
                 f"   Limite Real de Commit do PC: {self.specs.commit_limit_gb} GB\n"
-                f"   Déficit: Faltam ~{diff} GB de memória virtual! Reduza a memória do servidor para 2048 MB ou higienize pacotes pesados."
+                f"   Déficit: Faltam ~{diff} GB de memória virtual! Reduza a memória do servidor para 2048 MB ou aumente o arquivo de paginação do Windows."
             )
 
         # ─── REGRA 6: Classificar Mods Aprovados (VERDE) ───
