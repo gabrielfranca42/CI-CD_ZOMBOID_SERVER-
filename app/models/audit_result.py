@@ -17,6 +17,14 @@ class AuditResult:
     available_commit_gb: float = 0.0
     errors: List[str] = field(default_factory=list)
     warnings: List[str] = field(default_factory=list)
+    log_verified: bool = False
+    log_status: str = "Nenhum log verificado"
+    log_diagnostic: str = ""
+    log_detailed_diagnostics: List[str] = field(default_factory=list)
+    mods_vfs_loaded: int = 0
+    mods_lua_confirmed: int = 0
+    mods_silent: int = 0
+    mods_without_lua: List[str] = field(default_factory=list)
     sp_status: str = "PASS"
     mp_status: str = "FAIL"
     mp_issues: List[str] = field(default_factory=list)
@@ -35,6 +43,9 @@ class AuditResult:
             "total_depthmaps": self.total_depthmaps,
             "total_fbx_animations": self.total_fbx_animations,
             "est_native_vram_gb": self.est_native_vram_gb,
+            "mods_vfs_loaded": self.mods_vfs_loaded,
+            "mods_lua_confirmed": self.mods_lua_confirmed,
+            "mods_silent": self.mods_silent,
             "errors": self.errors,
             "warnings": self.warnings,
             "mp_issues": self.mp_issues
