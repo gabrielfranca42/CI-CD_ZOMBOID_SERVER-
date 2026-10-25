@@ -1,4 +1,6 @@
-﻿__pycache__/
+__pycache__/
 *.pyc
 *.bak
 */__pycache__/
+failure_logs/
+*.log
