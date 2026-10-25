@@ -23,11 +23,19 @@ while ($true) {
     Write-Host "[7] Higienizar Servidor - VERMELHOS + AMARELOS (crash + alertas)" -ForegroundColor DarkYellow
     Write-Host "[8] Testar Admissao de Novo Mod no Servidor (Build + Hardware MP)" -ForegroundColor Yellow
     Write-Host ""
-    Write-Host "[9] Sair" -ForegroundColor Gray
+    Write-Host "[--- GERENCIAMENTO AVANCADO DE MODS ---]" -ForegroundColor Magenta
+    Write-Host "[9] Remover Mod Especifico por ID (SP, MP ou Ambos)" -ForegroundColor Magenta
+    Write-Host "[10] Baixar e Validar Mod/Dependencia via SteamCMD (Tempo Real)" -ForegroundColor Magenta
+    Write-Host "[11] Reordenar Modlist Automaticamente (Ordem Topologica de Dependencias)" -ForegroundColor Magenta
+    Write-Host "[12] Sincronizar Todos os Mods do Servidor via SteamCMD (Pre-Boot)" -ForegroundColor Cyan
+    Write-Host "[13] Baixar/Implantar Todos os Mods via Manifesto JSON (data/server_mods_manifest.json)" -ForegroundColor Green
+    Write-Host "[14] Ativar Zero-Steam Boot (Limpar WorkshopItems= e Iniciar Direto Sem Steam)" -ForegroundColor Yellow
+    Write-Host ""
+    Write-Host "[0] Sair" -ForegroundColor Gray
     Write-Host "=======================================================================" -ForegroundColor Cyan
     Write-Host ""
 
-    $opt = Read-Host "Escolha uma opcao (1-9)"
+    $opt = Read-Host "Escolha uma opcao (0-14)"
 
     switch ($opt) {
         "1" {
@@ -105,6 +113,77 @@ while ($true) {
             Read-Host "Pressione ENTER para voltar ao menu..."
         }
         "9" {
+            Write-Host ""
+            $modId = Read-Host "Digite o ID do mod que deseja remover"
+            if ($modId) {
+                Write-Host "Onde deseja remover?"
+                Write-Host "[1] Singleplayer apenas"
+                Write-Host "[2] Multiplayer (Servidor) apenas"
+                Write-Host "[3] Ambos (Singleplayer e Servidor)"
+                $whereOpt = Read-Host "Opcao (1-3, padrao: 3)"
+                $modeArg = "both"
+                if ($whereOpt -eq "1") { $modeArg = "sp" }
+                elseif ($whereOpt -eq "2") { $modeArg = "mp" }
+
+                $delOpt = Read-Host "Deseja apagar os arquivos fisicos do disco tambem? (S/N, padrao: N)"
+                $delArg = ""
+                if ($delOpt -eq "S" -or $delOpt -eq "s") {
+                    $delArg = "--delete-files"
+                }
+
+                if ($delArg) {
+                    & $pyCmd "$PSScriptRoot\main.py" remove-mod $modId --mode $modeArg --delete-files
+                } else {
+                    & $pyCmd "$PSScriptRoot\main.py" remove-mod $modId --mode $modeArg
+                }
+            }
+            Write-Host ""
+            Read-Host "Pressione ENTER para voltar ao menu..."
+        }
+        "10" {
+            Write-Host ""
+            $modOrWs = Read-Host "Digite o ID do mod ou o Workshop ID numerico da Steam para baixar via SteamCMD"
+            if ($modOrWs) {
+                Write-Host "Onde deseja ativar apos baixar e validar?"
+                Write-Host "[1] Singleplayer (default.txt)"
+                Write-Host "[2] Multiplayer (servertest.ini)"
+                $whereOpt = Read-Host "Opcao (1-2, padrao: 1)"
+                $modeArg = if ($whereOpt -eq "2") { "mp" } else { "sp" }
+
+                & $pyCmd "$PSScriptRoot\main.py" install-mod $modOrWs --mode $modeArg
+            }
+            Write-Host ""
+            Read-Host "Pressione ENTER para voltar ao menu..."
+        }
+        "11" {
+            Write-Host ""
+            Write-Host "Calculando e aplicando ordem topologica de dependencias..." -ForegroundColor Cyan
+            & $pyCmd "$PSScriptRoot\main.py" reorder
+            Write-Host ""
+            Read-Host "Pressione ENTER para voltar ao menu..."
+        }
+        "12" {
+            Write-Host ""
+            Write-Host "Sincronizando todos os Workshop IDs do Servidor via SteamCMD..." -ForegroundColor Cyan
+            & $pyCmd "$PSScriptRoot\main.py" server-sync
+            Write-Host ""
+            Read-Host "Pressione ENTER para voltar ao menu..."
+        }
+        "13" {
+            Write-Host ""
+            Write-Host "Baixando e implantando mods a partir do manifesto JSON..." -ForegroundColor Green
+            & $pyCmd "$PSScriptRoot\main.py" sync-manifest
+            Write-Host ""
+            Read-Host "Pressione ENTER para voltar ao menu..."
+        }
+        "14" {
+            Write-Host ""
+            Write-Host "Ativando Zero-Steam Boot no Servidor..." -ForegroundColor Yellow
+            & $pyCmd "$PSScriptRoot\main.py" zero-steam
+            Write-Host ""
+            Read-Host "Pressione ENTER para voltar ao menu..."
+        }
+        "0" {
             Write-Host "Saindo da pipeline..."
             break
         }
@@ -114,7 +193,8 @@ while ($true) {
         }
     }
 
-    if ($opt -eq "9") {
+    if ($opt -eq "0") {
         break
     }
 }
+
