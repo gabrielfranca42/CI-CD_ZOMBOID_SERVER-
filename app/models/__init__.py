@@ -5,5 +5,7 @@ from .mod_list import ModList
 from .workshop import Workshop
 from .audit_result import AuditResult
 from .rules import RulesEngine
+from .log_inspector import LogInspector, ModRuntimeStatus
+from .steam_downloader import SteamDownloader
 
-__all__ = ["Mod", "SystemSpecs", "ModList", "Workshop", "AuditResult", "RulesEngine"]
+__all__ = ["Mod", "SystemSpecs", "ModList", "Workshop", "AuditResult", "RulesEngine", "LogInspector", "ModRuntimeStatus", "SteamDownloader"]
