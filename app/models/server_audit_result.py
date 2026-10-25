@@ -6,6 +6,7 @@ class ServerAuditResult:
     total_server_mods: int = 0
     total_workshop_items: int = 0
     missing_workshop_mappings: List[str] = field(default_factory=list)
+    missing_map_mappings: List[str] = field(default_factory=list)
     host_memory_mb: int = 2048
     client_memory_gb: float = 4.0
     total_required_commit_gb: float = 0.0
