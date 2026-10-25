@@ -7,8 +7,22 @@ class BuildValidator:
     """Performs static build and compilation verification on mods (Lua syntax, scripts, balance)."""
 
     @staticmethod
+    def _strip_lua_comments_and_strings(content: str) -> str:
+        """Strips comments and string literals from Lua source code to allow accurate keyword scanning."""
+        # 1. Multi-line comments --[(=*)\[ ... \]\1\]
+        content = re.sub(r'--\[(=*)\[.*?\]\1\]', '', content, flags=re.DOTALL)
+        # 2. Multi-line strings [(=*)\[ ... \]\1\]
+        content = re.sub(r'(?<!-)\[(=*)\[.*?\]\1\]', '""', content, flags=re.DOTALL)
+        # 3. Single-line comments -- ...
+        content = re.sub(r'--[^\r\n]*', '', content)
+        # 4. Quoted single-line strings "..." and '...'
+        content = re.sub(r'"(?:\\.|[^"\\])*"', '""', content)
+        content = re.sub(r"'(?:\\.|[^'\\])*'", "''", content)
+        return content
+
+    @staticmethod
     def validate_lua_syntax(file_path: str) -> Optional[str]:
-        """Simple syntax and integrity scanner for a Lua script."""
+        """Validates Lua syntax and block integrity without false positives on elseif chains."""
         try:
             with open(file_path, "r", encoding="utf-8", errors="replace") as f:
                 content = f.read()
@@ -18,82 +32,39 @@ class BuildValidator:
         if "\x00" in content:
             return "Arquivo corrompido com bytes nulos."
 
-        lines = content.splitlines()
+        cleaned = BuildValidator._strip_lua_comments_and_strings(content)
+
+        # In Lua grammar, blocks are opened by:
+        # - 'if' (closed by matching 'end', regardless of how many 'elseif' or 'else' branches exist)
+        # - 'do' (standalone 'do', 'while ... do', 'for ... do', all closed by 'end')
+        # - 'function' (closed by 'end')
+        # - 'repeat' (closed by 'until')
+        tokens = re.findall(r'\b(if|do|function|repeat|end|until)\b', cleaned)
+
         block_starts = 0
         block_ends = 0
+        for t in tokens:
+            if t in ("if", "do", "function"):
+                block_starts += 1
+            elif t == "repeat":
+                block_starts += 1
+            elif t == "end":
+                block_ends += 1
+            elif t == "until":
+                block_ends += 1
 
-        in_multiline_comment = False
-        in_multiline_string = False
-
-        for i, line in enumerate(lines, 1):
-            s = line.strip()
-
-            # Handle multi-line comments --[[ ... ]]
-            if in_multiline_comment:
-                if "]]" in s:
-                    in_multiline_comment = False
-                continue
-            if "--[[" in s:
-                in_multiline_comment = True
-                continue
-
-            # Handle multi-line strings [[ ... ]]
-            if in_multiline_string:
-                if "]]" in s:
-                    in_multiline_string = False
-                continue
-
-            # Skip single-line comments
-            if s.startswith("--"):
-                continue
-
-            # Remove inline comments (-- ...) before analysis
-            s_no_comment = re.sub(r'--(?!\[).*$', '', s)
-
-            # Strip string literals to avoid counting keywords inside quotes
-            s_clean = re.sub(r'\"(\\.|[^\"])*\"', '', s_no_comment)
-            s_clean = re.sub(r"'(\\.|[^'])*'", '', s_clean)
-
-            # Detect start of multi-line string on this line
-            if "[[" in s_clean and not s_clean.strip().startswith("--"):
-                # Only if it's not followed by ]] on the same line
-                after_bracket = s_clean.split("[[", 1)[1] if "[[" in s_clean else ""
-                if "]]" not in after_bracket:
-                    in_multiline_string = True
-
-            # Count block keywords using word boundaries
-            tokens = re.findall(r'\b(function|then|do|repeat|until|end)\b', s_clean)
-            for t in tokens:
-                if t in ("function", "then", "do", "repeat"):
-                    block_starts += 1
-                elif t in ("end", "until"):
-                    block_ends += 1
-
-        # A severe imbalance typically indicates a truncated or broken Lua script
-        # Use a percentage-based threshold to avoid false positives from inline patterns
-        # like "if x then return end" or lambda-style closures common in PZ mods
-        total_blocks = max(block_starts, block_ends, 1)
-        abs_diff = abs(block_starts - block_ends)
-
-        # Generous thresholds: PZ mods use unusual Lua patterns
-        # Small files (≤80 blocks): absolute threshold of 8
-        # Medium files (80-200 blocks): 20% tolerance, min 10
-        # Large files (>200 blocks): 18% tolerance, min 25
-        if total_blocks > 200:
-            threshold = max(int(total_blocks * 0.18), 25)
-        elif total_blocks > 80:
-            threshold = max(int(total_blocks * 0.20), 10)
-        else:
-            threshold = 8
-
-        if abs_diff > threshold:
-            return f"Desbalanceamento grave de blocos (starts: {block_starts}, ends: {block_ends}) - possível script incompleto."
+        if block_starts != block_ends:
+            diff = abs(block_starts - block_ends)
+            return (
+                f"Desbalanceamento de blocos Lua ({block_starts} aberturas vs {block_ends} fechamentos, "
+                f"diferença: {diff}) - script incompleto ou com erro de sintaxe."
+            )
 
         return None
 
     @staticmethod
     def validate_script_files(file_path: str) -> Optional[str]:
-        """Validates Zomboid item/recipe script files (.txt)."""
+        """Validates Zomboid item/recipe/model script files (.txt) ensuring balanced braces."""
         try:
             with open(file_path, "r", encoding="utf-8", errors="replace") as f:
                 content = f.read()
@@ -103,15 +74,17 @@ class BuildValidator:
         if "\x00" in content:
             return "Arquivo de script corrompido com bytes nulos."
 
-        # Remove comments (/* ... */ and // ...)
-        content_no_comments = re.sub(r'/\*.*?\*/', '', content, flags=re.DOTALL)
-        content_no_comments = re.sub(r'//.*$', '', content_no_comments, flags=re.MULTILINE)
+        # Remove multi-line comments /* ... */
+        content_clean = re.sub(r'/\*.*?\*/', '', content, flags=re.DOTALL)
+        # Remove single-line comments // ... and # ...
+        content_clean = re.sub(r'(?://|#)[^\r\n]*', '', content_clean)
+        # Remove quoted strings "..." to prevent braces inside strings from skewing counts
+        content_clean = re.sub(r'"(?:\\.|[^"\\])*"', '""', content_clean)
 
-        open_braces = content_no_comments.count("{")
-        close_braces = content_no_comments.count("}")
+        open_braces = content_clean.count("{")
+        close_braces = content_clean.count("}")
 
-        # Allow off-by-one tolerance for script files (common in PZ mod scripts)
-        if abs(open_braces - close_braces) > 1:
+        if open_braces != close_braces:
             return f"Desbalanceamento de chaves em script PZ: {open_braces} '{{' vs {close_braces} '}}'."
 
         return None
@@ -145,3 +118,8 @@ class BuildValidator:
                         errors.append(f"Erro em Script ({rel}): {err}")
 
         return errors
+
+    @classmethod
+    def validate_mod(cls, mod: Mod) -> List[str]:
+        """Alias for compile_check_mod."""
+        return cls.compile_check_mod(mod)
