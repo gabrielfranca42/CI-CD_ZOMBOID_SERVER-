@@ -18,7 +18,7 @@ class ModList:
             for line in f:
                 m = re.search(r'mod\s*=\s*([^,;\r\n]+)', line)
                 if m:
-                    mod_id = m.group(1).strip()
+                    mod_id = m.group(1).strip().lstrip(r"\/")
                     if mod_id and mod_id not in self.active_mod_ids:
                         self.active_mod_ids.append(mod_id)
 
@@ -46,7 +46,7 @@ class ModList:
         for line in lines:
             m = re.search(r'mod\s*=\s*([^,;\r\n]+)', line)
             if m:
-                mid = m.group(1).strip()
+                mid = m.group(1).strip().lstrip(r"\/")
                 if mid in mod_ids_to_remove:
                     removed += 1
                     continue
@@ -57,3 +57,11 @@ class ModList:
 
         self.load() # reload active
         return removed
+
+    def save_ordered_mods(self, ordered_mod_ids: List[str]):
+        """Saves active mods in a specific load order to default.txt."""
+        self.backup()
+        with open(self.file_path, "w", encoding="utf-8") as f:
+            for mid in ordered_mod_ids:
+                f.write(f"mod={mid}\n")
+        self.load()
