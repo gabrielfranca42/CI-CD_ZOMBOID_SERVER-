@@ -24,6 +24,9 @@ class TerminalView:
         print(f"Animações 3D (.FBX): {result.total_fbx_animations} esqueletos")
         hw_status = "APROVADO" if result.hardware_test_passed else "REPROVADO (Falta Memória Virtual/Swap)"
         print(f"TESTE DE CAPACIDADE DE HARDWARE: [{hw_status}] (Demanda: ~{result.required_memory_gb} GB / Limite: {result.available_commit_gb} GB)")
+        print(f"EVIDÊNCIA DE LOGS (console.txt): [{result.log_status}]")
+        if result.mods_vfs_loaded > 0:
+            print(f"EXECUÇÃO DE MODS: {result.mods_lua_confirmed}/{result.mods_vfs_loaded} mods com Lua executada | {result.mods_silent} mods silenciosos")
         print("-"*75)
         print(f"STATUS SINGLEPLAYER: [{result.sp_status}]")
         print(f"STATUS MULTIPLAYER:  [{result.mp_status}]")
