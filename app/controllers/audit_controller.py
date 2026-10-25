@@ -35,4 +35,14 @@ class AuditController:
             ReportView.export_markdown(self.specs, result, report_path)
             TerminalView.show_message(f"Relatório exportado em: {report_path}")
 
+        # Failure Logs (.txt individual per broken mod)
+        from app.views.failure_log_view import FailureLogGenerator
+        from app.models.log_inspector import LogInspector
+        log_res = LogInspector.inspect(self.specs.user_zomboid_dir)
+        logs_dir = os.path.join(os.getcwd(), "failure_logs")
+        generated_logs = FailureLogGenerator.generate_sp_logs(result, log_res, logs_dir)
+        if generated_logs:
+            TerminalView.show_message(f"Logs de falha individuais (.txt) gerados em: {logs_dir} ({len(generated_logs)} arquivo(s))")
+
         return result
+
