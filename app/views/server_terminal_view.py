@@ -73,6 +73,13 @@ class ServerTerminalView:
             if len(result.missing_workshop_mappings) > 5:
                 print(f"   ... e mais {len(result.missing_workshop_mappings) - 5} mods. Use 'Sincronizar Servidor' para preencher automaticamente.")
 
+        if result.missing_map_mappings:
+            print(f"\n[🗺️] MAPAS SEM CONFIGURAÇÃO EM Map= ({len(result.missing_map_mappings)} encontrados):")
+            for m in result.missing_map_mappings[:5]:
+                print(f" - {m}")
+            if len(result.missing_map_mappings) > 5:
+                print(f"   ... e mais {len(result.missing_map_mappings) - 5} mapas.")
+
         if result.warnings:
             print("\n[?] AVISOS DO SERVIDOR:")
             for warn in result.warnings[:5]:
